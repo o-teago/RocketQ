@@ -89,9 +89,60 @@
     padding: .8rem 2.4rem;
 }
 
-#questions .question-wrapper{
+/* questions */
+.question-wrapper{
     background: var(--light-blue);
     padding: 2.4rem;
     border-radius: 0 0.8rem 0.8rem 0.8rem;
+    margin-bottom: .8rem;
+}
+
+.question-wrapper .question-content{
+    display: flex;
+    align-items: flex-start;
+}
+
+.question-wrapper .question-content .user{
+    clip-path: circle();
+    background: var(--blue);
+    padding: 1.4rem;
+}
+
+.question-wrapper .question-content p{
+    margin-left: 1.6rem;
+    color: var(--black);
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    min-height: 5.2rem;
+}
+
+.question-wrapper .actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 0;
+}
+
+.question-wrapper .actions > a{
+    display: flex;
+    align-items: center;
+}
+
+.question-wrapper .actions > a + a{
+    margin-left: 2.4rem;
+}
+
+.question-wrapper .actions > a > img{
+    margin-right: .8rem;
+}
+/* question read */
+
+.question-wrapper.read{
+    background-color: var(--grey-opacity);
+}
+
+.question-wrapper.read .question-content .user{
+    background: var(--grey-blue);
 }
 

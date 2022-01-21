@@ -23,6 +23,7 @@ html{
     --grey-blue:   #A1B2CD;
     --grey-medium: #D3D9E2;
     --grey-light:  #E5EAF1;
+    --grey-opacity:  #EAECF2;
 
 
     --hover-blue: #5699FF;
@@ -106,6 +107,19 @@ button.outlined,
     color: var(--blue);
 }
 
+button.red, 
+.button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+button.grey,
+.button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+/* header */
 .content header{
 
     width: 80%;
