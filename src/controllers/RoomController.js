@@ -1,6 +1,7 @@
 const Database = require("../db/config")
 
 module.exports = {
+
     async create(req, res){
         const db = await Database()
         const pass = req.body.password
@@ -26,7 +27,7 @@ module.exports = {
                     ${parseInt(roomId)},
                     ${pass}
                 )`)
-                
+
                 exists = false
             }   
         }
@@ -34,5 +35,10 @@ module.exports = {
         await db.close()
         
         res.redirect(`/room/${roomId}`)
+    },
+
+    open(req,res){
+        const roomId = req.params.room
+        res.render("room", {roomId: roomId})
     }
 }
